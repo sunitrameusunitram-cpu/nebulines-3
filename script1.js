@@ -1,0 +1,3 @@
+
+(()=>{const go=document.getElementById('goOpenBoosters');if(go)go.addEventListener('click',()=>{if(typeof showTab==='function')showTab('boosters');else document.querySelector('[data-tab="boosters"]')?.click();window.scrollTo({top:0,behavior:'smooth'});});const nav=document.querySelector('.tabbar.compact-nav'),hint=document.getElementById('navSwipeHint');if(nav&&hint){let touched=false;const update=()=>{const canScroll=nav.scrollWidth>nav.clientWidth+8;hint.style.display=canScroll?'flex':'none';if(touched)hint.style.opacity='.62';};nav.addEventListener('scroll',()=>{touched=true;hint.style.opacity='.62';},{passive:true});nav.addEventListener('touchstart',()=>{touched=true;},{passive:true});window.addEventListener('resize',update);setTimeout(update,100);}}
+)();
